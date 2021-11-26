@@ -1,0 +1,99 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+body {
+  font-family: 'Nunito', sans-serif;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: url('/assets/images/bg.jpg') no-repeat center center;
+  background-size: cover;
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+}
+
+h1 {
+  font-size: 4.2rem;
+  color: #ae1a1f;
+  margin-bottom: 2rem;
+}
+
+.main {
+  padding: 0 1rem;
+}
+
+.main span {
+  position: absolute;
+  top: -50px;
+  border-radius: 50%;
+  height: 20px;
+  width: 20px;
+  z-index: 100;
+  background-color: #fff;
+  filter: blur(3px);
+  animation: snowFall 5s linear infinite;
+}
+
+@keyframes snowFall {
+  100% {
+    transform: translateY(105vh) scale(0.4);
+  }
+}
+
+.countdown {
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
+
+.time {
+  text-align: center;
+}
+
+.time h2 {
+  font-size: 4rem;
+  background: #ae1a1f;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  margin-bottom: 0.5rem;
+}
+
+.time small {
+  font-size: 1.2rem;
+  color: #d13d42;
+  font-weight: 600;
+}
+
+.time:not(:first-child) {
+  margin-left: 1.6rem;
+}
+
+@media (max-width: 730px) {
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  .time h2 {
+    font-size: 2rem;
+    background: #ae1a1f;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+  }
+
+  .time small {
+    font-size: 1rem;
+    color: #ae1a1f;
+    font-weight: 600;
+  }
+}
